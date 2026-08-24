@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concrete Strength Predictor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-left">
+
+            <div class="top-tag"><span class="blue-square"></span></div>
+            <p class="intro-text">Estimate the compressive strength of a <br>concrete mix from its material composition.</p>
+        </div>
+        <div class="header-right">
+            <h1>Concrete <br><span class="blue-header">Strength</span><br>Predictor</h1>
+        </div>
+    </header>
+
+    <main class="main-dashboard">
+        
+        <div class="panel left-panel">
+            <div class="card form-card">
+                <div class="card-top">
+                    <span class="card-tag"><span class="bold-blue">PARAMETERS</span> </span>
+                </div>
+
+                <h2 id="card-header">Define your mix</h2>
+
+                <!-- Added 'compact' to apply the tighter 2-column grid -->
+                <div class="form-grid compact">
+                
+                    <div class="input-group">
+                        <label for="cement">Cement</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="cement">
+                            <span class="unit">kg/m&sup3;</span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="blastFurnace">Blast Furnace Slag</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="blastFurnace">
+                            <span class="unit">kg/m&sup3;</span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="flyAsh">Fly Ash</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="flyAsh">
+                            <span class="unit">kg/m&sup3;</span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="input-group">
+                        <label for="water">Water</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="water">
+                            <span class="unit">kg/m&sup3;</span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="superplastic">Superplasticizer</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="superplastic">
+                            <span class="unit">kg/m&sup3;</span>
+                        </div>
+                    </div>
+
+                 
+                    <div class="input-group">
+                        <label for="coarse">Coarse Aggregate</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="coarse">
+                            <span class="unit">kg/m&sup3;</span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="fine">Fine Aggregate</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="fine">
+                            <span class="unit">kg/m&sup3;</span>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="age">Age</label>
+                        <div class="input-wrapper">
+                            <input type="number" id="age">
+                            <span class="unit">Days</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-footer">
+                    <span class="required-note">* All fields are required</span>
+                    <button class="primary-btn" id="predict-btn" >Predict &rarr;</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel right-panel">
+            
+            <div class="card result-card">
+                <span class="card-tag">ESTIMATED COMPRESSIVE STRENGTH</span>
+                <div class="result-display">
+                    <span class="result-value">.....</span>
+                    <span class="result-unit">MPa</span>
+                </div>
+            </div>
+
+         
+            <div class="card visuals-card">
+                <span class="card-tag">MATERIAL COMPOSITION ANALYSIS</span>
+                <div class="charts-container">
+                    
+                    <div class="chart-box">
+                        <p class="placeholder-text">Mix Proportions Chart</p>
+                    </div>
+                    <div class="chart-box">
+                        <p class="placeholder-text">Strength vs. Time Curve</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
